@@ -10,8 +10,6 @@ const ProductSchema = new Schema<IProduct>({
     price: {type: Number, require: true}
 })
 
-ProductSchema.pre('save', () => console.log('Método save do Schema'))
-
 const Product = model<IProduct>("Product", ProductSchema)
 
 export default Product;
